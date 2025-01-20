@@ -6,6 +6,16 @@ from pdf_read import read
 from edge_tts.exceptions import *
 
 def main():
+    hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            MainMenu {visibility: hidden}
+            .reportview-container .main footer {visibility: hidden;}
+            </style>
+            """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
     emp = st.empty()
     with st.sidebar:
         op = st.radio(
